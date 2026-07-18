@@ -1,5 +1,5 @@
-const fs = require("@lune/fs")
-const serde = require("@lune/serde")
+local fs = require("@lune/fs")
+local serde = require("@lune/serde")
 
 if not fs.isDir(".test_artifact") then
 	fs.writeDir(".test_artifact")
