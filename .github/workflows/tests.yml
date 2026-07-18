@@ -10,7 +10,7 @@ defaults:
 on:
     push:
         branches:
-            - main
+            - master
         paths:
             - .github/workflows/tests.yml
             - lune/**
