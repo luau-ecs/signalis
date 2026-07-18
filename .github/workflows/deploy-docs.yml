@@ -25,8 +25,12 @@ jobs:
                   python-version: 3.x
             - run: pip install zensical
             - run: zensical build --clean
+            - name: nest site
+              run: |
+                  mkdir -p _site/umn/signalis
+                  cp -r site/. _site/umn/signalis
             - uses: actions/upload-pages-artifact@v5
               with:
-                  path: site
+                  path: _site
             - uses: actions/deploy-pages@v5
               id: deployment
