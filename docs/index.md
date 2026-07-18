@@ -24,10 +24,10 @@ wally install
 
 </details>
 <details>
-<summary><a href="https://pesde.dev/packages/luau-ecs/signalis/versions" target="_blank">pesde (not published yet)</a></summary>
+<summary><a href="https://pesde.dev/packages/luau_ecs/signalis/versions" target="_blank">pesde (not published yet)</a></summary>
 
 ```
-pesde add luau-ecs/signalis
+pesde add luau_ecs/signalis
 pesde install
 ```
 
