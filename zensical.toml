@@ -1,0 +1,151 @@
+[project]
+
+nav = [
+  { "home" = "index.md" },
+  { "learn" = [
+    "learn/contents.md",
+    "learn/quick_start.md",
+  ] },
+  { "resources" = [
+    "resources/faq.md",
+    "resources/resources.md",
+  ] },
+  # { "semantics" = [
+  #   "semantics/contents.md",
+  # ] },
+  { "performance & tests" = [
+    "performance/contents.md",
+    "performance/how.md",
+    { "conformance" = [
+      "performance/conformance/certification.md",
+    ] },
+    { "benchmarks" = [
+      "performance/benchmarks/certification.md",
+    ] },
+  ] },
+  # { "internals" = [
+  #   "internals/contents.md",
+  # ] },
+  { "contributing" = [
+    "contributing/info.md",
+  ] },
+]
+
+site_name = "signalis documentation"
+
+site_description = "the official site for signalis"
+
+site_author = "nnullcolumn"
+
+copyright = "copyright &copy; 2026 luau-ecs authors"
+
+extra_css = ["assets/stylesheets/extra.css"]
+
+repo_url = "https://github.com/luau-ecs/signalis"
+repo_name = "signalis"
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+
+[project.extra.version]
+provider = "mike"
+default = "stable"
+
+[project.theme]
+
+language = "en"
+
+features = [
+  "content.action.edit",       # edit this page
+  "content.action.view",       # view source of this page
+  "announce.dismiss",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  # https://zensical.org/docs/setup/header/#automatic-hiding
+  # "header.autohide",
+  # https://zensical.org/docs/setup/navigation/#navigation-expansion
+  # "navigation.expand",
+  "navigation.footer",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.instant.progress",
+  "navigation.path",
+  # https://zensical.org/docs/setup/navigation/#navigation-pruning
+  #"navigation.prune",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.tracking",
+  # https://zensical.org/docs/setup/search/#search-highlighting
+  # "search.highlight",
+  # https://zensical.org/docs/setup/navigation/#anchor-following
+  # "toc.follow",
+  # https://zensical.org/docs/setup/navigation/#navigation-integration
+  #"toc.integrate",
+]
+
+logo = "assets/images/signalis.png"
+
+# read more:
+# - https://zensical.org/docs/setup/colors/
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "switch to light mode"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/luau-ecs/signalis"
+[[project.extra.social]]
+icon = "fontawesome/brands/youtube"
+link = "https://www.youtube.com/@nnullcolumn"
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = "https://discord.com/invite/5kjv64pa3d"
+
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.toc]
+permalink = true
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+[project.markdown_extensions.pymdownx.betterem]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.emoji]
+emoji_generator = "zensical.extensions.emoji.to_svg"
+emoji_index = "zensical.extensions.emoji.twemoji"
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.magiclink]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.smartsymbols]
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+combine_header_slug = true
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+[project.markdown_extensions.pymdownx.tilde]
