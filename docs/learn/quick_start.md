@@ -37,19 +37,4 @@ npm i @rbxts/signalis
 
 </details>
 
-## 
-
-to get started, you need to create an ecs object. it stores all of your entities and their members, allows you to query
-for state, and more. usually, a single world is created and returned in a module, but there is no limit to how many ecs
-objects you can create.
-
-```luau
-local onto = require(path.to.onto)
-local ecs = onto.ecs()
-
-return ecs
-```
-
 ## signals
-
-todo
