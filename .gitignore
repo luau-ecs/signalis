@@ -1,0 +1,9 @@
+# place files
+**.rbxl*
+**.rbxm
+
+# zensical
+site/
+
+# js
+node_modules/
