@@ -15,8 +15,8 @@ on:
             - .github/workflows/tests.yml
             - lune/**
             - src/**
-            - .luaurc
-            - tests/**
+            - .config.luau
+            - test/**
 
     pull_request:
     workflow_dispatch:
@@ -43,7 +43,7 @@ jobs:
                   # only checkout files which are needed for running tests
                   sparse-checkout: |
                       rokit.toml
-                      .luaurc
+                      .config.luau
                       lune/
                       src/
                       tests/
