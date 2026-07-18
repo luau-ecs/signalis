@@ -1,3 +1,3 @@
-# FAQ
+# faq
 
 todo
