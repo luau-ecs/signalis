@@ -7,6 +7,9 @@ expect breaking changes on updates to 0.**x**.0 versions.
 
 signalis is one file available at [`src/init.luau`](https://github.com/luau-ecs/signalis/blob/master/src/init.luau).
 
+if using roblox studio, prebuilt `.rbxm` files are available in signalis'
+<a href="https://github.com/luau-ecs/signalis/releases" target="_blank">github releases</a>.
+
 it can also be added with your package manager of choice:
 <details>
 <summary><a href="https://wally.run/package/luau-ecs/signalis" target="_blank">wally (not published yet)</a></summary>
