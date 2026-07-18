@@ -40,5 +40,5 @@ npm i @rbxts/signalis
 
 ## documentation
 
-oxgz has excellent documentation including inline docs, api guide, contribution guides, internal blogs, and homework
+signalis has excellent documentation including inline docs, api guide, contribution guides, internal blogs, and homework
 exercises for everyday users! available at https://nnull.co/umn/signalis
