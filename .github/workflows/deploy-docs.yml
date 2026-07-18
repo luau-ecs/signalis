@@ -4,7 +4,7 @@ on:
         branches:
             - master
         paths:
-            - .github/workflows/docs.yml
+            - .github/workflows/deploy-docs.yml
             - docs/
             - zensical.toml
     workflow_dispatch:
