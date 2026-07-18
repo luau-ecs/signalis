@@ -1,0 +1,12 @@
+name = "luau_ecs/signalis"
+version = "0.1.0"
+description = "signalis is a robust, fast, fully-featured signal library for luau."
+authors = ["nnullcolumn"]
+repository = "https://github.com/luau-ecs/signalis"
+license = "MIT"
+
+[target]
+environment = "luau"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
