@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"module": "commonjs",
 	"repository": "https://github.com/luau-ecs/signalis",
-	"homepage": "https://nnull.co/umn/signalis/",
+	"homepage": "https://luau.nnull.co/umn/signalis",
 	"publishConfig": {
 		"access": "public"
 	},
