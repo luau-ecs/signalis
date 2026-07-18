@@ -1,7 +1,7 @@
 {
 	"name": "@rbxts/signalis",
 	"version": "0.1.0",
-	"description": "a modern signal library for roblox.",
+	"description": "a modern signal library for luau / roblox",
 	"main": "./src/init.luau",
 	"author": "@rbxts",
 	"license": "MIT",
