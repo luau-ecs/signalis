@@ -4,9 +4,6 @@ contact_links:
     - name: feature request
       url: https://github.com/luau-ecs/signalis/discussions/new/choose
       about: if you want a new api or feature, please open a discussion under one of the appropriate categories.
-    - name: security issue
-      url: https://luau.nnull.co/umn/signalis/contributing/security
-      about: if you encounter a potentially exploitable security issue, please see our security guidelines.
     - name: "oss discord (please visit #projects thread)"
       url: https://discord.com/invite/5kjv64pa3d
       about: "just have a question or need support? i can be found in the roblox oss server. please make sure you do not go into #general or #questions with your question. signalis has a dedicated thread in the #projects channel."
