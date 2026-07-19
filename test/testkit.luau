@@ -87,7 +87,7 @@ local function convert_units(unit: string, value: number): (number, string)
 	return value, prefix_colors[order](prefixes[order] .. unit)
 end
 
-local WALL = color.gray "│"
+local WALL = color.gray("│")
 
 --------------------------------------------------------------------------------
 -- Testing
@@ -121,10 +121,10 @@ local function output_test_result(test: Test)
 
 	for _, case in test.cases do
 		local status = ({
-			[PASS] = color.green "PASS",
-			[FAIL] = color.red "FAIL",
-			[NONE] = color.yellow "NONE",
-			[ERROR] = color.red "FAIL",
+			[PASS] = color.green("PASS"),
+			[FAIL] = color.red("FAIL"),
+			[NONE] = color.yellow("NONE"),
+			[ERROR] = color.red("FAIL"),
 		})[case.result]
 
 		local line = case.result == FAIL and color.red(`{case.line}:`) or ""
@@ -133,8 +133,8 @@ local function output_test_result(test: Test)
 	end
 
 	if test.error then
-		print(color.gray "error: " .. color.red(test.error.message))
-		print(color.gray "trace: " .. color.red(test.error.trace))
+		print(color.gray("error: ") .. color.red(test.error.message))
+		print(color.gray("trace: ") .. color.red(test.error.trace))
 	else
 		print()
 	end
@@ -157,7 +157,7 @@ local function CHECK<T>(value: T, stack: number?): T
 	local case = test.case
 
 	if not case then
-		CASE ""
+		CASE("")
 		case = test.case
 	end
 
@@ -196,7 +196,7 @@ local function TEST(name: string, fn: () -> ())
 	test.duration = os.clock() - start
 
 	if not test.case then
-		CASE ""
+		CASE("")
 	end
 	assert(test.case, "no active case")
 
@@ -228,11 +228,7 @@ local function FINISH(): boolean
 		output_test_result(test)
 	end
 
-	print(
-		color.gray(
-			string.format(`{passed_cases}/{total_cases} test cases passed in %.3f ms.`, duration * 1e3)
-		)
-	)
+	print(color.gray(string.format(`{passed_cases}/{total_cases} test cases passed in %.3f ms.`, duration * 1e3)))
 
 	local fails = total_cases - passed_cases
 
