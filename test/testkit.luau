@@ -3,6 +3,7 @@
 --------------------------------------------------------------------------------
 -- testkit.luau
 -- v0.7.3
+-- modified for signalis
 --------------------------------------------------------------------------------
 
 local color = {
@@ -110,7 +111,7 @@ type Case = {
 	line: number?,
 }
 
-local PASS, FAIL, NONE, ERROR = 1, 2, 3, 4
+local PASS, FAIL, NONE, LUAU_ERR = 1, 2, 3, 4
 
 local skip: string?
 local test: Test?
@@ -124,7 +125,7 @@ local function output_test_result(test: Test)
 			[PASS] = color.green("PASS"),
 			[FAIL] = color.red("FAIL"),
 			[NONE] = color.yellow("NONE"),
-			[ERROR] = color.red("FAIL"),
+			[LUAU_ERR] = color.red("FAIL"),
 		})[case.result]
 
 		local line = case.result == FAIL and color.red(`{case.line}:`) or ""
@@ -201,7 +202,7 @@ local function TEST(name: string, fn: () -> ())
 	assert(test.case, "no active case")
 
 	if not success then
-		test.case.result = ERROR
+		test.case.result = LUAU_ERR
 		test.error = err
 	end
 
