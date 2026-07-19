@@ -94,22 +94,22 @@ jobs:
             - name: publish
               run: pesde publish -y
 
-    publish-npm:
-        name: publish to npm
-        needs: release
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout
-              uses: actions/checkout@v4
+    # publish-npm:
+    #     name: publish to npm
+    #     needs: release
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: checkout
+    #           uses: actions/checkout@v4
 
-            - name: setup-node
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "24"
-                  registry-url: "https://registry.npmjs.org"
+    #         - name: setup-node
+    #           uses: actions/setup-node@v4
+    #           with:
+    #               node-version: "24"
+    #               registry-url: "https://registry.npmjs.org"
 
-            - name: install
-              run: npm install
+    #         - name: install
+    #           run: npm install
 
-            - name: publish
-              run: npm publish
+    #         - name: publish
+    #           run: npm publish
