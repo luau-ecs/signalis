@@ -49,7 +49,7 @@ jobs:
                   sparse-checkout-cone-mode: false
 
             - name: setup-rokit
-              uses: CompeyDev/setup-rokit@v0.1.2
+              uses: CompeyDev/setup-rokit@1d9390883f7ebce19d48f5b8d006e11d387c92ab
 
             - name: test script
               run: lune run lune/tests.luau
