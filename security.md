@@ -11,4 +11,5 @@ using signalis, it is best if you go through [bug reports](https://github.com/lu
 ## reporting exploitable bugs
 
 if a bug is likely or guaranteed to be present in all versions of signalis, can be predictably and exploitably triggered
-by users, or is already used to attack production games, please report it
+by users, or is already used to attack production games, please report it at <a href="mailto:admin@nnull.co">admin@nnull.co</a>
+or via [github private security reports](https://github.com/luau-ecs/signalis/security/advisories/new)
