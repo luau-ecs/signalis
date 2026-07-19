@@ -49,15 +49,15 @@ the code should typecheck, and be formatted with [stylua](https://github.com/joh
 pass as well as stylua --check will be run automatically on prs.
 
 if it is a bugfix with significant work associated,
-[please create an issue first](https://github.com/luau-ecs/signalis/issues/new?template=bug-report.md)
+[please create an issue first](https://github.com/luau-ecs/signalis/issues/new?template=bug-report.yml)
 and link it in your pr. if it is a feature request,
-[please create an issue first](https://github.com/luau-ecs/signalis/issues/new?template=feature-request-rfc.md)
+[please create a discussion first](https://github.com/luau-ecs/signalis/discussions/new?category=enhancements)
 
 ## performance enhancements
 
 performance enhancements are always welcome as an
-[issue](https://github.com/luau-ecs/signalis/issues/new?template=blank_issue),
-or
+[discussion](https://github.com/luau-ecs/signalis/discussions/new?category=enhancements)
+and / or
 [pull request](https://github.com/luau-ecs/signalis/pulls).
 you will be expected to answer these questions as evidence the optimization is worthwhile:
 
@@ -67,6 +67,12 @@ you will be expected to answer these questions as evidence the optimization is w
 - is it an algorithmic (asymptotic) improvement?
 - what are the drawbacks to optimizing this?
 - (for pull requests) how does it perform in benchmarks?
+
+## conduct / security
+
+all contributors or participants are expected to follow our [contribution conduct](https://luau.nnull.co/umn/contributing/conduct).
+
+if you believe an issue may be exploitable, please visit our [security](https://luau.nnull.co/umn/contributing/security) page.
 
 ## tools
 
