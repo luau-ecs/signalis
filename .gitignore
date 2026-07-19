@@ -1,12 +1,15 @@
-# place files
+# roblox binary files
 **.rbxl*
-**.rbxm
+**.rbxm*
 
 # zensical
-site/
+/site
 
 # js
-node_modules/
+/node_modules
+/out
+/include
+*.tsbuildinfo
 
 # test
-.test_artifact
+/.test_artifact
