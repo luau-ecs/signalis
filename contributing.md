@@ -6,11 +6,13 @@ a version of this document is also available for viewing on [our site](https://l
 
 ## questions
 
-if you have a question, there are two places you can reach me:
-
-- [github issues](https://github.com/luau-ecs/signalis)
+if you have a question, there are three places you can reach me:
 
 - [the roblox oss server](https://discord.com/invite/5kjv64pa3d)
+
+- [github discussions](https://github.com/luau-ecs/signalis/discussions)
+
+- [github issues](https://github.com/luau-ecs/signalis/issues)
 
 ## setup
 
