@@ -55,7 +55,7 @@ jobs:
                   files: signalis.rbxm
 
     publish-wally:
-        name: publish 2 wally!!!
+        name: publish to wally
         needs: release
         runs-on: ubuntu-latest
         steps:
