@@ -13,6 +13,7 @@ on:
             - master
         paths:
             - .github/workflows/styling.yml
+            - stylua.toml
             - lune/**
             - src/**
             - .config.luau
@@ -33,6 +34,7 @@ jobs:
                   # only checkout files which are being styled
                   sparse-checkout: |
                       rokit.toml
+                      stylua.toml
                       .config.luau
                       lune/
                       src/
