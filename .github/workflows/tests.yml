@@ -32,7 +32,7 @@ jobs:
                         { name: macos, version: macos-latest },
                         { name: macos-arm, version: macos-14 },
                     ]
-        name: tests-${{matrix.os.name}}
+        name: tests
         runs-on: ${{matrix.os.version}}
         if: ${{ !contains(github.event.head_commit.message, 'skip ci') }}
         steps:
