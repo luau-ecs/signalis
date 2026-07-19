@@ -91,7 +91,7 @@ features = [
   #"toc.integrate",
 ]
 
-logo = "assets/images/signalis.png"
+logo = "assets/images/logo.png"
 
 # read more:
 # - https://zensical.org/docs/setup/colors/

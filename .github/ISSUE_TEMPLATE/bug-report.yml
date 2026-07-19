@@ -1,0 +1,69 @@
+name: bug report
+description: report something which isnt behaving the way you expected
+type: bug
+labels: "triage"
+assignees: ["nnullcolumn"]
+body:
+    - type: markdown
+      attributes:
+          value: |
+              please check if this bug is [already reported](https://github.com/luau-ecs/signalis/issues). if it is, upvote it with a :+1: reaction
+
+              if you want a new api or feature, please open a [discussion](https://github.com/luau-ecs/signalis/discussions/new/choose) instead.
+
+              if it is likely this bug is exploitable in software using signalis, please see our
+              [security policy](https://luau.nnull.co/umn/signalis/contributing/security).
+
+              just have a question or need support? i can be found in [the roblox oss server](https://discord.com/invite/5kjv64pa3d)
+              <small>please make sure you do not go into #general or #questions with your question. signalis has a dedicated thread in the [projects](https://ptb.discord.com/channels/385151591524597761/1019724676265676930) channel.</small>
+
+              if you have multiple issues, please open them separately.
+    - type: dropdown
+      id: version
+      attributes:
+          label: "version(s)"
+          description: "please select the version you are experiencing issues with. the version can be found inside the module. if you know this happens for multiple versions, please select multiple. if the version(s) selected are inaccurate, it may take longer to find / fix this issue."
+          multiple: true
+          default: 0
+          options:
+              - other / unknown
+              - 0.1.0 (latest)
+      validations:
+          required: true
+    - type: dropdown
+      id: feature
+      attributes:
+          label: "feature(s)"
+          description: "what behavior(s) of signalis are you experiencing an issue with? you can select multiple."
+          multiple: true
+          options:
+              - firing
+              - listeners (this includes connection ordering, :once, :wait, etc.)
+              - collectors
+              - disconnecting
+              - deletion
+              - other / unknown
+      validations:
+          required: true
+    - type: textarea
+      attributes:
+          label: reproduction
+          description: a clear set of steps to cause the bug to happen ([luau playground](https://play.luau.org/) links, code fences, etc. are appreciated - avoid images). if your repro is long, it will take more time to triage or fix. please make sure the set of steps is as simple as possible and that someone without other information about your project can cause it to happen locally.
+          placeholder: |
+              luau playground link: https://play.luau.org/...
+
+              steps:
+              1. make 100 connections to a signal with specific ordering
+              2. fire it 10 times and observe the order
+      validations:
+          required: true
+    - type: textarea
+      attributes:
+          label: currvent vs. expected behavior
+          description: |
+              current behavior ([luau playground](https://play.luau.org/) links, code fences, etc. are appreciated - avoid images) vs. what you expected the behavior to be.
+
+          placeholder: |
+              current behavior: output callback ordering is random. expected behavior: callbacks should fire predictably because <link to documentation> says so
+      validations:
+          required: true
