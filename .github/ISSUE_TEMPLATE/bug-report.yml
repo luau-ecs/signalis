@@ -64,6 +64,6 @@ body:
               current behavior ([luau playground](https://play.luau.org/) links, code fences, etc. are appreciated - avoid images) vs. what you expected the behavior to be.
 
           placeholder: |
-              current behavior: output callback ordering is random. expected behavior: callbacks should fire predictably because <link to documentation> says so
+              current behavior: output callback ordering is random. expected behavior: callbacks should fire predictably because <link to documentation> says so. is this behavior a regression? (yes/no)
       validations:
           required: true
