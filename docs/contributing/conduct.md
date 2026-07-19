@@ -34,7 +34,7 @@ community leaders have the right and responsibility to remove, edit, or reject c
 this code of conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
 enforcement
 
-### enforcement / guidelines
+## enforcement / guidelines
 
 instances of abusive, harassing, or otherwise unacceptable behavior should be reported directly to <a href="mailto:admin@nnull.co">admin@nnull.co</a>. all complaints will be reviewed and investigated promptly. the privacy, security, and anonymity of any person reporting an incident will be respected completely.
 
@@ -45,17 +45,20 @@ community leaders will follow these community impact guidelines in determining t
 community impact: use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.
 
 consequence: a private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. a public apology may be requested.
-2. warning
+
+### 2. warning
 
 community impact: a violation through a single incident or series of actions.
 
 consequence: a warning with consequences for continued behavior. no interaction with the people involved, including unsolicited interaction with those enforcing the code of conduct, for a specified period of time. this includes avoiding interactions in community spaces as well as external channels like social media. violating these terms may lead to a temporary or permanent ban.
-3. temporary ban
+
+### 3. temporary ban
 
 community impact: a serious violation of community standards, including sustained inappropriate behavior.
 
 consequence: a temporary ban from any sort of interaction or public communication with the community for a specified period of time. no public or private interaction with the people involved, including unsolicited interaction with those enforcing the code of conduct, is allowed during this period. violating these terms may lead to a permanent ban.
-4. permanent ban
+
+### 4. permanent ban
 
 community impact: demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
 
