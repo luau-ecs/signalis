@@ -1,31 +1,50 @@
 {
+	"author": "@rbxts",
 	"name": "@rbxts/signalis",
 	"version": "0.1.0",
-	"description": "a modern signal library for luau / roblox",
+	"description": "signalis is a robust, fast, fully-featured signal library for luau. signalis is still early in development (pre-1.0), expect breaking changes on updates to 0.**x**.0 versions.",
 	"main": "./src/init.luau",
-	"author": "@rbxts",
 	"license": "MIT",
 	"module": "commonjs",
 	"repository": "https://github.com/luau-ecs/signalis",
+	"types": "src/index.d.ts",
+	"files": [
+		"./src"
+	],
 	"homepage": "https://luau.nnull.co/umn/signalis",
+	"directories": {
+		"doc": "docs",
+		"test": "test"
+	},
+	"scripts": {
+		"build": "rbxtsc",
+		"watch": "rbxtsc -w",
+		"prepublishOnly": "npm run build"
+	},
+	"keywords": [
+		"luau",
+		"rbxts",
+		"roblox-ts",
+		"signal"
+	],
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/luau-ecs/signalis/issues"
+	},
 	"publishConfig": {
 		"access": "public"
 	},
 	"devDependencies": {
-		"@rbxts/compiler-types": "^2.2.0-types.0",
-		"@rbxts/types": "^1.0.761",
-		"@typescript-eslint/eslint-plugin": "^8.31.0",
-		"@typescript-eslint/parser": "^8.31.0",
-		"eslint": "^9.31.0",
-		"eslint-config-prettier": "^10.1.2",
-		"eslint-plugin-prettier": "^5.1.3",
-		"eslint-plugin-roblox-ts": "^0.0.36",
-		"prettier": "^3.2.5",
-		"typescript": "^5.4.2",
-		"vitepress": "^1.6.3"
-	},
-	"types": "./src/index.d.ts",
-	"files": [
-		"./src"
-	]
+		"@rbxts/compiler-types": "^3.0.0-types.0",
+		"@rbxts/types": "^1.0.939",
+		"@typescript-eslint/eslint-plugin": "^8.64.0",
+		"@typescript-eslint/parser": "^8.64.0",
+		"eslint": "^10.7.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-prettier": "^5.5.6",
+		"eslint-plugin-roblox-ts": "^1.4.0",
+		"prettier": "^3.9.5",
+		"roblox-ts": "^3.0.0",
+		"typescript": "^5.9.3"
+	}
 }
