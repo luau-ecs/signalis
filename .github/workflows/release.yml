@@ -1,0 +1,115 @@
+name: release
+
+on:
+    push:
+        tags:
+            - "v*"
+    workflow_dispatch:
+
+permissions:
+    id-token: write
+    contents: write
+
+jobs:
+    build:
+        name: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+
+            - name: setup-rokit
+              uses: CompeyDev/setup-rokit@v0.1.2
+
+            - name: build
+              run: rojo build --output build.rbxm release.project.json
+
+            - name: upload-artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: build
+                  path: build.rbxm
+
+    release:
+        name: release
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+
+            - name: download build
+              uses: actions/download-artifact@v4
+              with:
+                  name: build
+                  path: build
+
+            - name: rename build
+              run: mv build/build.rbxm signalis.rbxm
+
+            - name: publish release
+              uses: softprops/action-gh-release@v1
+              with:
+                  name: signalis ${{ github.ref_name }}
+                  tag_name: ${{ github.ref_name }}
+                  files: signalis.rbxm
+
+    publish-wally:
+        name: publish 2 wally!!!
+        needs: release
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+
+            - name: setup-rokit
+              uses: CompeyDev/setup-rokit@v0.1.2
+
+            - name: install
+              run: wally install
+
+            - name: auth
+              run: wally login --token "${{ secrets.WALLY_TOKEN }}"
+
+            - name: publish
+              run: wally publish
+
+    publish-pesde:
+        name: publish to pesde
+        needs: release
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+
+            - name: setup-rokit
+              uses: CompeyDev/setup-rokit@v0.1.2
+
+            - name: install
+              run: pesde install
+
+            - name: auth
+              run: pesde auth login --token "${{ secrets.PESDE_TOKEN }}"
+
+            - name: publish
+              run: pesde publish -y
+
+    publish-npm:
+        name: publish to npm
+        needs: release
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+
+            - name: setup-node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "24"
+                  registry-url: "https://registry.npmjs.org"
+
+            - name: install
+              run: npm install
+
+            - name: publish
+              run: npm publish

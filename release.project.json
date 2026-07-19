@@ -1,0 +1,6 @@
+{
+	"name": "signalis",
+	"tree": {
+		"$path": "src/init.luau"
+	}
+}

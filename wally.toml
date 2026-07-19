@@ -4,5 +4,13 @@ version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "MIT"
+include = [
+	"src",
+	"readme.md",
+	"changelog.md",
+	"license",
+	"wally.toml",
+	"release.project.json",
+]
 
 [dependencies]
