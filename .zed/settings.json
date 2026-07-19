@@ -23,12 +23,7 @@
 						"workspace": true
 					},
 					"types": {
-						"disabledGlobals": [
-							"getfenv",
-							"setfenv",
-							"unpack",
-							"loadstring"
-						]
+						"disabledGlobals": ["getfenv", "setfenv", "unpack", "loadstring"]
 					},
 					"completion": {
 						"enabled": true,
@@ -54,6 +49,15 @@
 					"arguments": ["-"]
 				}
 			}
+		},
+		"TypeScript": {
+			"formatter": "prettier"
+		},
+		"JSON": {
+			"formatter": "prettier"
+		},
+		"JSONC": {
+			"formatter": "prettier"
 		}
 	}
 }
