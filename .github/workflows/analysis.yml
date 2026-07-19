@@ -1,0 +1,51 @@
+name: analysis
+
+permissions:
+    contents: read
+
+defaults:
+    run:
+        shell: bash
+
+on:
+    push:
+        branches:
+            - master
+        paths:
+            - .github/workflows/styling.yml
+            - lune/**
+            - src/**
+            - .config.luau
+            - test/**
+    pull_request:
+    workflow_dispatch:
+    merge_group:
+
+jobs:
+    test:
+        name: analysis
+        runs-on: ubuntu-latest
+        if: ${{ !contains(github.event.head_commit.message, 'skip ci') }}
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+              with:
+                  # only checkout files which are being analyzed
+                  sparse-checkout: |
+                      rokit.toml
+                      .config.luau
+                      lune/
+                      src/
+                      test/
+                  sparse-checkout-cone-mode: false
+
+            - name: setup-rokit
+              uses: CompeyDev/setup-rokit@v0.1.2
+            - name: setup lune
+              run: lune setup
+            - name: analyze src
+              run: lune run lune/analysis.luau src
+            - name: analyze tests
+              run: lune run lune/analysis.luau test
+            - name: analyze lune scripts
+              run: lune run lune/analysis.luau lune
